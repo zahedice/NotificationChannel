@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/input_register"
+    tools:context="com.example.zahedur.notificationchannel.AddingNews">
+
+    <EditText
+        android:id="@+id/doctor_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/input_register_bg"
+        android:textColor="@color/input_register"
+        android:textColorHint="@color/input_register_hint"
+        android:hint="Add the Message for the patient"
+        android:lines="5"
+        android:layout_margin="10dp"
+        />
+    <Button
+        android:id="@+id/submit_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit information"
+        android:textColor="#fff"
+        android:background="@color/btn_login"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

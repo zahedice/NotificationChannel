@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#304769"
+    tools:context="com.example.zahedur.notificationchannel.MainActivity">
+
+
+    <TextView
+        android:id="@+id/et1"
+        android:lines="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Patient's Message appear here"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:background="@color/input_register_bg"
+        android:textColor="@color/input_register"/>
+
+    <TextView
+        android:id="@+id/et2"
+        android:lines="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Server notification appear here"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:background="@color/input_register_bg"
+        android:textColor="@color/input_register"/>
+
+
+    <Button
+        android:layout_margin="10dp"
+        android:layout_alignBottom="@id/et1"
+        android:id="@+id/addingnewnews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Message to the patient"
+        android:background="#039385" />
+
+    <Button
+
+        android:id="@+id/button"
+        android:text="Show previous messages"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#039385"/>
+
+ <Button
+
+        android:id="@+id/button3"
+        android:text="Show Previous Health Status"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#039385"/>
+
+
+
+</LinearLayout>
