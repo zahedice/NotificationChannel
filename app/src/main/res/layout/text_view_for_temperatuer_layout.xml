@@ -2,16 +2,18 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
     <TextView
         android:gravity="left"
-        android:id="@+id/textviewforlist1"
+        android:id="@+id/textviewforlist3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textColor="#edf5ed"
-        android:background="#000"
         android:layout_margin="10dp"
         android:textSize="15sp"
 
-
         />
+
+
 </android.support.constraint.ConstraintLayout>

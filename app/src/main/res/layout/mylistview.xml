@@ -6,13 +6,11 @@
 
 
     <TextView
-        android:gravity="center"
-        android:textStyle="bold"
+        android:gravity="left"
         android:id="@+id/textviewforlist"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textColor="#edf5ed"
-        android:text="dummy"
         android:layout_margin="10dp"
         android:textSize="20sp"
 

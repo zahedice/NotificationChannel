@@ -47,7 +47,7 @@ public class AddingNews extends AppCompatActivity {
         //date = (EditText)findViewById(R.id.date);
         submit= (Button)findViewById(R.id.submit_news);
 
-        Toast.makeText(getApplicationContext(),username, Toast.LENGTH_LONG).show();
+        // Toast.makeText(getApplicationContext(),username, Toast.LENGTH_LONG).show();
         //String mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
 
         //date.setText(mydate);

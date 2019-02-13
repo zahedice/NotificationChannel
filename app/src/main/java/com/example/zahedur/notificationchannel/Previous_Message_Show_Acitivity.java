@@ -71,7 +71,7 @@ public class Previous_Message_Show_Acitivity extends AppCompatActivity {
        // mTextView.setMovementMethod(new ScrollingMovementMethod());
 
         // Initialize a new RequestQueue instance
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+       // RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
 
         // Initialize a new JsonArrayRequest instance
@@ -117,7 +117,8 @@ public class Previous_Message_Show_Acitivity extends AppCompatActivity {
     String temp1,temp2;
     private void doctorname(JSONArray j) {
         arrayList1.clear();
-        for (int i = 0; i < j.length(); i++) {
+        //for (int i = 0; i < j.length(); i++) {
+        for (int i = j.length()-1; i >=0 ; i--){
             try {
                 JSONObject json = j.getJSONObject(i);
                 temp1=json.getString(message);

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "849275893883-5fkmq8vhn1h9nvcious7cf31ijee5loq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zahedur.notificationchannel",
+            "certificate_hash": "809d355e42ab63e2297848e13739e1a6300a0dfe"
+          }
+        },
+        {
           "client_id": "849275893883-gbjgdahlut4e6ip8c7b7i3d3q8ko3i8p.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849275893883-gbjgdahlut4e6ip8c7b7i3d3q8ko3i8p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

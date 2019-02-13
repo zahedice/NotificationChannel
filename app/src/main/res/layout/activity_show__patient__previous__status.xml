@@ -20,20 +20,36 @@
        android:background="@android:color/white"/>
     <Button
         android:id="@+id/heartBtn"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="100dp"
         android:layout_marginRight="10dp"
         android:text="Heart Beat"
         android:background="@android:color/white"
         android:layout_width="130dp"
         android:layout_height="50dp" />
-</LinearLayout>I
+</LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     <ListView
         android:layout_marginTop="20dp"
-        android:id="@+id/messageList"
+        android:id="@+id/messageList2"
         android:listSelector="#167f90"
         android:dividerHeight="5dp"
         android:divider="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="wrap_content"
 
+        ></ListView>
+    <ListView
+        android:layout_marginTop="30dp"
+        android:id="@+id/messageList3"
+        android:listSelector="#167f90"
+        android:dividerHeight="5dp"
+        android:divider="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        ></ListView>
+</LinearLayout>
 </LinearLayout>

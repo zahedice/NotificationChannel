@@ -31,17 +31,19 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-     public TextView et1,et2;
+     public TextView et1;
     String  message=" ";
     String  date;
 
     String result=" ";
     String result1=" ";
+    String result2=" ";
     int check =0,ck=0;
 
     Button b;
     Button see_msg;
-    Button seePreviousMessage;
+    Button previousHrtBtn;
+    Button previousPreviousBtn;
     int  loginCheck=1;
     public SessionManager session;
     FirebaseMessagingService fmc;
@@ -60,25 +62,26 @@ public class MainActivity extends AppCompatActivity {
        // see_msg = (Button) findViewById(R.id.button);
 
         et1= (TextView) findViewById(R.id.et1);
-        et2= (TextView) findViewById(R.id.et2);
         //et2= (EditText)findViewById(R.id.et2);
         //b = (Button)findViewById(R.id.button);
 
         see_msg = (Button)findViewById(R.id.button);
-        seePreviousMessage = (Button) findViewById(R.id.button3);
+        previousPreviousBtn = (Button) findViewById(R.id.button3);
+       // previousHrtBtn = (Button) findViewById(R.id.button4);
 
 
        /// Intent intent = getIntent();
        // username = intent.getExtras().getString("username");
 
         //Toast.makeText(getApplicationContext(),username, Toast.LENGTH_LONG).show();
-        seePreviousMessage.setOnClickListener(new View.OnClickListener() {
+        previousPreviousBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Show_Patient_Previous_Status.class));
 
             }
         });
+
 
 
          see_msg.setOnClickListener(new View.OnClickListener() {
@@ -109,20 +112,8 @@ public class MainActivity extends AppCompatActivity {
 
                try {
 
-
-                  fetchingData1(message);
-
-               } catch (JSONException e) {
-                   e.printStackTrace();
-               }
-
-
-           }
-           if(message != null){
-
-               try {
-
-                  fetchingData(message);
+                   fetchingData(message);
+                  // fetchingData1(message);
 
                } catch (JSONException e) {
                    e.printStackTrace();
@@ -130,6 +121,35 @@ public class MainActivity extends AppCompatActivity {
 
 
            }
+            if(message != null){
+
+                try {
+
+                   // fetchingData(message);
+                     fetchingData1(message);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+
+            if(message != null){
+
+                try {
+
+                    // fetchingData(message);
+                    fetchingData2(message);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+
+
         }
 
 
@@ -184,10 +204,9 @@ public class MainActivity extends AppCompatActivity {
 
     void fetchingData(String message) throws JSONException {
 
-        String  mes=" ", date=" ";
 
-        String in;
-        in = message;
+        String  mes=" ";
+
 
         JSONArray contacts = new JSONArray(message);
 
@@ -196,6 +215,14 @@ public class MainActivity extends AppCompatActivity {
         //name = jsonObject.getString("id");
         mes = jsonObject.getString("message");
         date = jsonObject.getString("upload_date");
+
+        // name = jsonObject.getString("title");
+       // temp = jsonObject.getString("temperature");
+        // heart_rate = jsonObject.getString("HeartRate");
+        //date = jsonObject.getString("upload_date");
+
+        //result1 = result1 +   date + " \n" + "Temperature: "+temp +"\n\n";
+
 
         result = result + " (" + date + ") \n" + mes;
 
@@ -214,15 +241,36 @@ public class MainActivity extends AppCompatActivity {
 
         JSONObject jsonObject = contacts.getJSONObject(0);
 
-        name = jsonObject.getString("title");
-        temp = jsonObject.getString("Temperature");
-        heart_rate = jsonObject.getString("HeartRate");
-        date = jsonObject.getString("time");
+       // name = jsonObject.getString("title");
+        temp = jsonObject.getString("temperature");
+       // heart_rate = jsonObject.getString("HeartRate");
+        date = jsonObject.getString("upload_date");
 
-        result1 = result1 + "Name: "+name + " (" + date + ") \n" + "Temperature: "+temp + "\nHeart Rate: "+heart_rate+"\n\n";
+        result1 = result1 +   date + " \n" + "Temperature: "+temp +"\n\n";
 
 
-        et2.setText(result1);
+        et1.setText(result1);
+
+    }
+
+    void fetchingData2(String message) throws JSONException {
+
+        String name=" ", temp= " ",heart_rate=" ",date=" ";
+
+
+        JSONArray contacts = new JSONArray(message);
+
+        JSONObject jsonObject = contacts.getJSONObject(0);
+
+        // name = jsonObject.getString("title");
+        temp = jsonObject.getString("heartbeat");
+        // heart_rate = jsonObject.getString("HeartRate");
+        date = jsonObject.getString("upload_date");
+
+        result2 = result2 +   date + " \n" + "Heartbeat: "+temp +"\n\n";
+
+
+        et1.setText(result2);
 
     }
 
